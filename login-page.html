@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta - Setup -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="keywords" content="">
+        <meta name="decription" content="">
+
+        <!-- Title -->
+        <title>Biz Bootstarp</title>
+
+        <!-- Fav - Icon -->
+        <link rel="icon" type="text/css" href="images/b1.png" />
+
+        <!-- FontAwesome - Link -->
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css" />
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/sharp-solid.css" />
+
+        <!-- Animate.css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.3.0/animate.css" />
+        <link rel="stylesheet" type="text/css" href="css/animate.css">
+
+        <!-- Owl - Carousel - Css -->
+        <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+
+        <!-- Bootstrap - Link -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+        <!-- Main - Stylesheet -->
+        <link rel="stylesheet" type="text/css" href="style.css" />
+
+        <!-- Responsive -->
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+    </head>
+<body>
+
+    <!-- header-area start here -->
+    <header class="header-area about-header p-0 login-header">
+        <img class="psion_1" src="images/ellipse1.png" alt="image">
+        <nav class="navbar navbar-expand navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand hdr_a" href="#"><img src="images/biz_logo.png" alt="image"></a>
+                <button style="border: none;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <!-- <span class="navbar-toggler-icon"></span> -->
+                    <i class="fas fa-bars" style="color: #fff;"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav header_list btn_list ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link sign text-center" style="width: 92px;" href="home-page.html">Back</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Tabs-area start here -->
+    <section class="tabs-area">
+        <div class="container">
+            <div class="wdt-tab">
+                <div class="tab">
+                    <button class="tablinks active mrg" id="One">Login</button>
+                    <button class="tablinks mrg2" id="Two">Reset Password</button>
+                </div>
+
+                <div id="One" class="tabcontent">
+                    <form action="#" method="POST">
+                        <label class="d-block" for="email">
+                            <span>Username/email address <sup>*</sup></span>
+                        </label>
+                        <input id="email" type="text" name="#" placeholder="Enter username / email address" required="">
+                        <p>You can use your username or email address to login.</p>
+                        <label class="d-block" for="password">
+                            <span>Password <sup>*</sup></span>
+                        </label>
+                        <input id="password" type="password" name="#" placeholder="Enter password" required="">
+                        <p>Enter the password that accompanies your username.</p>
+                        <div class="text-center">
+                            <button type="submit">Login</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div id="Two" class="tabcontent">
+                    <form action="#" method="POST">
+                        <label class="d-block" for="email1">
+                            <span>Username/email address <sup>*</sup></span>
+                        </label>
+                        <input id="email1" type="text" name="#" placeholder="Enter username / email address" required="">
+                        <p>Password reset instructions will be sent to your registered email address.</p>
+                        <div class="text-center">
+                            <button style="width: 194px; margin: 0 auto; text-align: center; padding: 14px 0;" type="submit">Reset Password</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <!-- Bootstrap - Js -->
+    <script src="js/bootstrap.js"></script>
+
+    <!-- Jquery - Js -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Scripts - Js -->
+    <script src="js/scripts.js"></script>
+
+    <!-- Wow - min - Js -->
+    <script src="js/wow.min.js"></script>
+
+    <!-- Owl - Carousel - Js -->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script>
+        //At the document ready event
+        $(function(){
+            new WOW().init(); 
+        });
+
+        //also at the window load event
+        $(window).on('load', function(){
+            new WOW().init(); 
+        });
+    </script>
+
+    <script>
+        
+        const buttonElement = document.querySelectorAll('.tablinks');
+        const tabContent = document.querySelectorAll(".tabcontent");
+
+        tabContent[0].style.display = "block";
+
+        buttonElement.forEach(function (i) {
+            i.addEventListener('click', function (event) {
+
+                for (let x = 0; x < buttonElement.length; x++) {
+                    if (event.target.id == buttonElement[x].id) {
+                        buttonElement[x].className = buttonElement[x].className.replace(" active", "");
+                        tabContent[x].style.display = "block";
+                        event.currentTarget.className += " active";
+                    } else {
+                        tabContent[x].style.display = "none";
+                        buttonElement[x].className = buttonElement[x].className.replace(" active", "");
+                    }
+                }
+                
+            });
+        });
+
+    </script>
+
+   
+
+</body>
+</html>
